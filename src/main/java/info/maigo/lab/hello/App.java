@@ -1,14 +1,17 @@
 package info.maigo.lab.hello;
-import org.apache.log4j.Logger;
 import org.json.*;
 import com.mashape.unirest.http.*;
+import org.apache.log4j.BasicConfigurator;  
+import org.apache.log4j.LogManager;  
+import org.apache.log4j.Logger;  
 
 public class App {
-  static Logger logger = Logger.getLogger(App.class);
+ // static Logger logger = Logger.getLogger(App.class);
+  private static final Logger logger = LogManager.getLogger(App.class);
   public static void main(String[] args) throws Exception {
-    logger.info(Level.INFO,“Hello World1”);
-    logger.log(Level.INFO,“Hello World2”);
-    System.out.println("Hello World3");
+   BasicConfigurator.configure();  
+   logger.info("Hello world");  
+   logger.info("This is main method"); 
     for (String name: args) {
       System.out.println("name: " + name);
       String jsonString = new App(name).getUserInfoJSON();
