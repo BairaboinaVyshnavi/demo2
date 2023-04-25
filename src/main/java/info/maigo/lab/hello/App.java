@@ -1,17 +1,17 @@
 package info.maigo.lab.hello;
 import org.json.*;
 import com.mashape.unirest.http.*;
-import org.apache.log4j.BasicConfigurator;  
-import org.apache.log4j.LogManager;  
-import org.apache.log4j.Logger;  
+//import org.apache.log4j.BasicConfigurator;  
+//import org.apache.log4j.LogManager;  
+//import org.apache.log4j.Logger;  
 
 public class App {
  // static Logger logger = Logger.getLogger(App.class);
-  private static final Logger logger = LogManager.getLogger(App.class);
+  //private static final Logger logger = LogManager.getLogger(App.class);
   public static void main(String[] args) throws Exception {
-   BasicConfigurator.configure();  
-   logger.info("Hello world");  
-   logger.info("This is main method"); 
+   //BasicConfigurator.configure();  
+   //logger.info("Hello world");  
+   //logger.info("This is main method"); 
     for (String name: args) {
       System.out.println("name: " + name);
       String jsonString = new App(name).getUserInfoJSON();
