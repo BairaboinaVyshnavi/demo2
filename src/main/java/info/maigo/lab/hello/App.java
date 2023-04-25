@@ -1,11 +1,14 @@
 package info.maigo.lab.hello;
-
+import org.apache.log4j.Logger;
 import org.json.*;
 import com.mashape.unirest.http.*;
 
 public class App {
-
+  static Logger logger = Logger.getLogger(App.class);
   public static void main(String[] args) throws Exception {
+    logger.info(“Hello World1”);
+    logger.log(“Hello World2”);
+    System.out.println("Hello World3");
     for (String name: args) {
       System.out.println("name: " + name);
       String jsonString = new App(name).getUserInfoJSON();
